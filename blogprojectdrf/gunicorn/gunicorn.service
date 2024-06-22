@@ -10,7 +10,7 @@ WorkingDirectory=/home/ubuntu/blogprojectdrf
 ExecStart=/home/ubuntu/blogprojectdrf/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
-          --bind unix:/home/ubuntu/blogprojectdrf/blog/blog.sock \
+          --bind unix:/run/gunicorn.sock \
           blog.wsgi:application
 [Install]
 WantedBy=multi-user.target
