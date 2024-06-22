@@ -11,5 +11,5 @@ sudo ln -s /etc/nginx/sites-available/blog /etc/nginx/sites-enabled/
 sudo fuser -k 80/tcp
 sudo fuser -k 443/tcp
 sudo gpasswd -a www-data ubuntu
-sudo service restart nginx
+sudo systemctl restart nginx
 
