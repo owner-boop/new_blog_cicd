@@ -8,6 +8,8 @@ sudo cp /home/ubuntu/blogprojectdrf/nginx/nginx.conf /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/blog /etc/nginx/sites-enabled/
 #sudo ln -s /etc/nginx/sites-available/blog /etc/nginx/sites-enabled
 #sudo nginx -t
+sudo fuser -k 80/tcp
+sudo fuser -k 443/tcp
 sudo gpasswd -a www-data ubuntu
 #sudo systemctl restart nginx
 
